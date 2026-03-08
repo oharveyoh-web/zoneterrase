@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rampe Aluminium - Zone Terrasse</title>
+  <meta name="description" content="Rampe Aluminium par Zone Terrasse. Conception et construction à Québec. RBQ 5782-3031-01.">
+  <link rel="canonical" href="https://zoneterrasse.ca/rampe-aluminium/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Cabin:wght@700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--brown:rgb(160,116,83);--brown-hover:rgb(192,140,101);--dark:rgb(22,22,22);--white:rgb(247,247,247)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;font-size:16px;color:var(--dark);background:#fff;-webkit-font-smoothing:antialiased}
+    .skip-link{position:absolute;top:-100%;left:1rem;z-index:10000;padding:.5rem 1rem;background:var(--brown);color:#fff;text-decoration:none;font-weight:700}
+    .skip-link:focus{top:.5rem}
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--dark);padding:0 24px;display:flex;justify-content:space-between;align-items:center;min-height:70px}
+    .logo img{height:80px;display:block}
+    .main-nav{display:flex;list-style:none;gap:0;align-items:center}
+    .main-nav li{position:relative}
+    .main-nav>li>a{display:block;padding:24px 16px;color:var(--white);text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;transition:color .3s}
+    .main-nav>li>a:hover{color:var(--brown)}
+    .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--dark);min-width:220px;list-style:none;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:100}
+    .main-nav li:hover .dropdown-menu{display:block}
+    .dropdown-menu a{display:block;padding:12px 20px;color:var(--white);text-decoration:none;font-size:.78rem;font-weight:400;letter-spacing:.5px;transition:background .2s}
+    .dropdown-menu a:hover{background:rgba(160,116,83,.2)}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+    .nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:all .3s}
+    .page-header{margin-top:70px;padding:56px 24px;text-align:center;background:#fff}
+    .page-header h1{font-family:'Cabin',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:1rem;color:var(--dark)}
+    .page-header p{font-size:1rem;font-weight:300;color:#555;max-width:700px;margin:0 auto;line-height:1.7}
+    .gallery{padding:0 24px 56px;max-width:1100px;margin:0 auto}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;box-shadow:1px 1px 3px rgba(0,0,0,.1);transition:transform .3s,filter .3s}
+    .gallery-grid img:hover{transform:scale(1.02);filter:brightness(1.05)}
+    footer{background:var(--dark);padding:24px;text-align:center;font-size:.8rem;color:rgba(247,247,247,.5);border-top:1px solid rgba(255,255,255,.05)}
+    @media(max-width:1023px){.main-nav{display:none}.nav-toggle{display:block}.main-nav.open{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--dark);padding:0}.main-nav.open .dropdown-menu{position:static;box-shadow:none;display:none}.main-nav.open li:hover .dropdown-menu{display:block}}
+    @media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:450px){.gallery-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <header role="banner">
+    <a href="/" class="logo" aria-label="Zone Terrasse — Accueil">
+      <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/blob.png/:/rs=h:200,cg:true,m/qt=q:95" alt="Zone Terrasse" width="160" height="80">
+    </a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav aria-label="Navigation principale">
+      <ul class="main-nav" id="main-nav" role="menubar">
+        <li role="none"><a href="/" role="menuitem">Accueil</a></li>
+        <li role="none"><a href="/#apropos" role="menuitem">À propos</a></li>
+        <li role="none"><a href="/#services" role="menuitem">Services</a></li>
+        <li role="none">
+          <a href="/#realisations" role="menuitem" aria-haspopup="true">Nos réalisations</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Sous-menu réalisations">
+            <li role="none"><a href="/solarium/" role="menuitem">Solarium</a></li>
+            <li role="none"><a href="/rampes-et-solarium/" role="menuitem">Rampes et solarium</a></li>
+            <li role="none"><a href="/rampes-en-verre/" role="menuitem">Rampes en verre</a></li>
+            <li role="none"><a href="/rampes/" role="menuitem">Rampes</a></li>
+            <li role="none"><a href="/rampe-et-pergolas/" role="menuitem">Rampe et Pergolas</a></li>
+            <li role="none"><a href="/rampe-aluminium/" role="menuitem">Rampe Aluminium</a></li>
+            <li role="none"><a href="/pergolas/" role="menuitem">Pergolas</a></li>
+            <li role="none"><a href="/deckavie/" role="menuitem">Deckavie</a></li>
+            <li role="none"><a href="/commercial/" role="menuitem">Commercial</a></li>
+          </ul>
+        </li>
+        <li role="none"><a href="/#contact" role="menuitem">Contactez-nous</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <div class="page-header">
+      <h1>Découvrez nos rampes en aluminium</h1>
+      <p>Parlez-nous de votre projet de terrasse et voyons ensemble comment le réaliser.</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-grid">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Rampe%20Aluminium%20(1).jpg/:/rs=w:600,m" alt="Installation de rampes en aluminium durables et modernes." loading="lazy" width="600" height="450">
+      </div>
+    </div>
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2026 Zone Terrasse - Tous droits réservés.</p>
+  </footer>
+  <script>
+    const t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');
+    t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  </script>
+</body>
+</html>
