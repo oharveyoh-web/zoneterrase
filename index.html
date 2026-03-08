@@ -3,121 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zone Terrasse — Construction patio et terrasse | Québec</title>
-  <meta name="description" content="Zone Terrasse : conception et construction de patios, terrasses, pergolas et aménagements extérieurs à Québec. RBQ 5782-3031-01.">
+
+  <!-- SEO: proper title + description -->
+  <title>Zone Terrasse — Construction patio et terrasse à Québec | RBQ 5782-3031-01</title>
+  <meta name="description" content="Zone Terrasse : conception et construction de patios, terrasses, pergolas, solariums et aménagements extérieurs durables à Québec. Licence RBQ 5782-3031-01. Soumission gratuite.">
+
+  <!-- SEO: canonical -->
+  <link rel="canonical" href="https://zoneterrasse.ca/">
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:title" content="Zone Terrasse — Construction patio et terrasse à Québec">
+  <meta property="og:description" content="Conception et construction de patios, terrasses, pergolas et aménagements extérieurs. Licence RBQ 5782-3031-01.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zoneterrasse.ca/">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/3ea1cc00-ed97-4b2c-b49c-72f999b11174.jpg/:/rs=w:1200,m">
+
+  <!-- SEO: Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Zone Terrasse",
+    "description": "Conception et construction de patios, terrasses, pergolas et aménagements extérieurs à Québec.",
+    "url": "https://zoneterrasse.ca",
+    "telephone": "+1-418-999-5325",
+    "email": "zoneterrasse@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "570 Rue de l'Argon, Porte 100",
+      "addressLocality": "Québec",
+      "addressRegion": "QC",
+      "addressCountry": "CA"
+    },
+    "openingHours": "Mo-Fr by appointment",
+    "image": "https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/3ea1cc00-ed97-4b2c-b49c-72f999b11174.jpg/:/rs=w:1200,m",
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Québec"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "RBQ License",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Régie du bâtiment du Québec"
+      }
+    }
+  }
+  </script>
+
+  <!-- Fonts: same as original but with display=swap for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Cabin:wght@700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --brown: #a07453;
-      --brown-light: #c4956e;
-      --brown-dark: #7a5639;
-      --black: #0a0a0a;
-      --dark: #141414;
-      --dark-card: #1a1a1a;
-      --grey: #2a2a2a;
-      --text: #f0ece8;
-      --text-muted: #8a8580;
-      --gold: #d4a574;
+      --brown: rgb(160, 116, 83);
+      --brown-hover: rgb(192, 140, 101);
+      --brown-active: rgb(163, 118, 85);
+      --dark: rgb(22, 22, 22);
+      --white: rgb(247, 247, 247);
+      --bg-light: rgb(246, 246, 246);
+      --border: rgb(218, 218, 218);
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: var(--text);
-      overflow-x: hidden;
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      color: var(--dark);
+      background: #fff;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ========== NAV ========== */
-    nav {
+    /* Accessibility: skip link */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 10000;
+      padding: 0.5rem 1rem;
+      background: var(--brown);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      top: 0.5rem;
+    }
+
+    /* ===== NAV ===== */
+    header {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      padding: 1.5rem 3rem;
+      background: var(--dark);
+      padding: 0 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all 0.4s ease;
-      background: transparent;
+      min-height: 70px;
     }
 
-    nav.scrolled {
-      background: rgba(10,10,10,0.95);
-      backdrop-filter: blur(20px);
-      padding: 1rem 3rem;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+    .logo img {
+      height: 80px;
+      display: block;
     }
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
-
-    .logo span { color: var(--gold); }
-
-    .nav-links {
+    .main-nav {
       display: flex;
-      gap: 2.5rem;
       list-style: none;
+      gap: 0;
       align-items: center;
     }
 
-    .nav-links a {
-      color: var(--text-muted);
+    .main-nav li { position: relative; }
+
+    .main-nav > li > a {
+      display: block;
+      padding: 24px 16px;
+      color: var(--white);
       text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
       text-transform: uppercase;
+      letter-spacing: 1px;
       transition: color 0.3s;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .main-nav > li > a:hover { color: var(--brown); }
 
-    .nav-cta {
-      background: var(--brown) !important;
-      color: var(--text) !important;
-      padding: 0.65rem 1.5rem;
-      border-radius: 2px;
-      transition: background 0.3s !important;
+    /* Dropdown */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--dark);
+      min-width: 220px;
+      list-style: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 100;
     }
 
-    .nav-cta:hover { background: var(--brown-light) !important; }
+    .main-nav li:hover .dropdown-menu { display: block; }
 
-    .hamburger {
+    .dropdown-menu a {
+      display: block;
+      padding: 12px 20px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: background 0.2s;
+    }
+
+    .dropdown-menu a:hover { background: rgba(160,116,83,0.2); }
+
+    /* Mobile nav toggle */
+    .nav-toggle {
       display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
       background: none;
       border: none;
-      padding: 5px;
+      cursor: pointer;
+      padding: 8px;
     }
 
-    .hamburger span {
+    .nav-toggle span {
+      display: block;
       width: 24px;
       height: 2px;
-      background: var(--text);
+      background: var(--white);
+      margin: 5px 0;
       transition: all 0.3s;
     }
 
-    /* ========== HERO ========== */
+    /* ===== HERO ===== */
     .hero {
       position: relative;
-      height: 100vh;
-      min-height: 700px;
+      min-height: 500px;
+      height: 70vh;
       display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 70px;
       overflow: hidden;
     }
 
@@ -125,959 +204,577 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.3) 50%, rgba(10,10,10,0.95) 100%),
-        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      transform: scale(1.05);
-      transition: transform 8s ease-out;
+        linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%),
+        url('https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/3ea1cc00-ed97-4b2c-b49c-72f999b11174.jpg/:/rs=w:1920,m') center/cover no-repeat;
     }
-
-    .hero:hover .hero-bg { transform: scale(1.0); }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 0 5vw 8vh;
+      padding: 0 24px;
       max-width: 800px;
     }
 
-    .hero-tag {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-      padding: 0.4rem 0;
-      border-bottom: 1px solid var(--gold);
-    }
-
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      color: var(--text);
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
     }
 
     .hero p {
+      font-family: 'Lato', sans-serif;
       font-size: 1.1rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      max-width: 540px;
-      margin-bottom: 2.5rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1rem 2.2rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--text);
-      background: var(--brown);
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .btn:hover {
-      background: var(--brown-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.4);
-    }
-
-    .btn svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.3s;
-    }
-
-    .btn:hover svg { transform: translateX(4px); }
-
-    /* ========== SECTION COMMONS ========== */
-    section { padding: 8rem 5vw; }
-
-    .section-header {
-      max-width: 600px;
-      margin-bottom: 5rem;
-    }
-
-    .section-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-header p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    /* ========== GALLERY — MASONRY ========== */
-    .gallery { background: var(--black); }
-
-    .gallery-grid {
-      columns: 3;
-      column-gap: 1rem;
-    }
-
-    .gallery-item {
-      break-inside: avoid;
-      margin-bottom: 1rem;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      border-radius: 2px;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      transition: transform 0.6s ease, filter 0.6s ease;
-      filter: brightness(0.85);
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-      filter: brightness(1);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 2rem 1.5rem;
-      background: linear-gradient(transparent, rgba(0,0,0,0.8));
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.4s ease;
-    }
-
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .gallery-overlay h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin-bottom: 0.3rem;
-    }
-
-    .gallery-overlay span {
-      font-size: 0.75rem;
-      color: var(--gold);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    /* ========== SERVICES ========== */
-    .services { background: var(--dark); }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-    }
-
-    .service-card {
-      background: var(--dark);
-      padding: 3rem 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.4s;
-      cursor: default;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .service-card:hover::before { transform: scaleX(1); }
-    .service-card:hover { background: var(--dark-card); }
-
-    .service-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .service-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-weight: 300;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
       line-height: 1.6;
     }
 
-    /* ========== PHOTO SHOWCASE — FULL WIDTH ========== */
-    .showcase {
-      padding: 0;
-      position: relative;
-    }
-
-    .showcase-scroll {
-      display: flex;
-      gap: 1rem;
-      padding: 0 5vw;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .showcase-scroll::-webkit-scrollbar { display: none; }
-
-    .showcase-card {
-      flex: 0 0 70vw;
-      max-width: 900px;
-      height: 65vh;
-      min-height: 450px;
-      scroll-snap-align: start;
-      position: relative;
-      overflow: hidden;
-      border-radius: 2px;
-    }
-
-    .showcase-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .showcase-card:hover img { transform: scale(1.03); }
-
-    .showcase-info {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 3rem 2.5rem;
-      background: linear-gradient(transparent, rgba(0,0,0,0.85));
-    }
-
-    .showcase-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .showcase-info p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    /* ========== ABOUT ========== */
-    .about {
-      background: var(--dark);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      padding: 0;
-    }
-
-    .about-image {
-      position: relative;
-      min-height: 600px;
-      overflow: hidden;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .about-content {
-      padding: 6rem 5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .about-content .section-tag { margin-bottom: 1rem; }
-
-    .about-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 2rem;
-    }
-
-    .about-content p {
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
-    }
-
-    .about-features {
-      list-style: none;
-      margin: 2rem 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .about-features li {
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--brown);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.85rem;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .about-features li::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .rbq {
-      margin-top: 2rem;
-      padding: 1.2rem 1.5rem;
-      background: rgba(160,116,83,0.1);
-      border-left: 2px solid var(--gold);
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-    }
-
-    .rbq strong { color: var(--text); }
-
-    /* ========== STATS ========== */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-      padding: 0;
-    }
-
-    .stat {
-      background: var(--black);
-      padding: 4rem 3rem;
-      text-align: center;
-    }
-
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      font-weight: 400;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.75rem;
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
+      font-weight: 600;
       text-transform: uppercase;
-      color: var(--text-muted);
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      min-height: 56px;
+      transition: background 0.3s;
     }
 
-    /* ========== CONTACT ========== */
-    .contact {
-      background: var(--dark);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      padding: 0;
+    .btn-primary:hover { background: var(--brown-hover); }
+    .btn-primary:active { background: var(--brown-active); }
+
+    /* ===== SECTIONS ===== */
+    .section { padding: 56px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-title {
+      font-family: 'Cabin', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--dark);
     }
 
-    .contact-form-wrap {
-      padding: 6rem 5rem;
-    }
+    /* ===== SERVICES ===== */
+    .services { background: #fff; }
 
-    .contact-form-wrap h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-
-    .contact-form-wrap > p {
-      color: var(--text-muted);
-      margin-bottom: 3rem;
-      font-size: 0.95rem;
+    .services-intro {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 2rem;
       line-height: 1.7;
     }
 
-    .form-group {
+    .services-list {
+      max-width: 600px;
+      margin: 0 auto;
+      list-style: disc;
+      padding-left: 24px;
+    }
+
+    .services-list li {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .services-note {
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 300;
+      font-style: italic;
+      color: #666;
+      max-width: 650px;
+      margin: 2rem auto 0;
+      line-height: 1.6;
+    }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--bg-light); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .about-col h3 {
+      font-family: 'Cabin', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .about-col p {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .about-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem;
+    }
+
+    .about-col ul li {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .about-col .tagline {
+      font-weight: 700;
+      font-style: italic;
+      color: var(--dark);
+      margin-top: 1rem;
+    }
+
+    /* ===== GALLERY ===== */
+    .gallery-section { background: #fff; }
+
+    .gallery-intro {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.02);
+      filter: brightness(1.05);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-section { background: var(--bg-light); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .contact-form h3 {
+      font-family: 'Cabin', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
       margin-bottom: 1.5rem;
     }
 
-    .form-group label {
-      display: block;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
+    .form-field {
+      margin-bottom: 1rem;
     }
 
-    .form-group input,
-    .form-group textarea {
+    .form-field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-field input,
+    .form-field textarea {
       width: 100%;
-      padding: 1rem;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
+      padding: 12px;
+      border: 1px solid var(--border);
+      font-family: 'Lato', sans-serif;
       font-size: 0.9rem;
-      border-radius: 2px;
+      color: var(--dark);
+      background: #fff;
       transition: border-color 0.3s;
     }
 
-    .form-group input:focus,
-    .form-group textarea:focus {
+    .form-field input:focus,
+    .form-field textarea:focus {
       outline: none;
-      border-color: var(--gold);
+      border-color: var(--brown);
     }
 
-    .form-group textarea { resize: vertical; min-height: 140px; }
+    .form-field textarea { resize: vertical; min-height: 120px; }
 
-    .contact-info-wrap {
-      background:
-        linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)),
-        url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80') center/cover;
-      padding: 6rem 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+    .contact-info h3 {
+      font-family: 'Cabin', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
     }
 
-    .contact-detail {
-      margin-bottom: 2rem;
+    .contact-info p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 1rem;
     }
 
-    .contact-detail h4 {
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-detail p {
-      font-size: 0.95rem;
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .contact-detail a {
-      color: var(--text);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .contact-detail a:hover { color: var(--gold); }
-
-    /* ========== FOOTER ========== */
-    footer {
-      padding: 3rem 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    footer a {
-      color: var(--text-muted);
+    .contact-info a {
+      color: var(--brown);
       text-decoration: none;
     }
 
-    footer a:hover { color: var(--text); }
+    .contact-info a:hover { text-decoration: underline; }
 
-    /* ========== LIGHTBOX ========== */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: rgba(0,0,0,0.95);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      cursor: zoom-out;
-      opacity: 0;
-      transition: opacity 0.3s;
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
     }
 
-    .lightbox.active {
-      display: flex;
-      opacity: 1;
+    .hours-table td {
+      padding: 6px 0;
+      font-size: 0.88rem;
+      color: #555;
+      border-bottom: 1px solid var(--border);
     }
 
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      object-fit: contain;
-      border-radius: 2px;
+    .hours-table td:first-child { font-weight: 700; }
+
+    .rbq {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dark);
     }
 
-    .lightbox-close {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      background: none;
-      border: none;
-      color: var(--text);
+    /* ===== NEWSLETTER ===== */
+    .newsletter {
+      background: var(--dark);
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-family: 'Cabin', sans-serif;
       font-size: 1.5rem;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: var(--white);
+      margin-bottom: 0.8rem;
     }
 
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 1024px) {
-      .gallery-grid { columns: 2; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .about { grid-template-columns: 1fr; }
-      .about-image { min-height: 400px; }
-      .about-content { padding: 4rem 2rem; }
-      .contact { grid-template-columns: 1fr; }
-      .contact-form-wrap { padding: 4rem 2rem; }
-      .contact-info-wrap { padding: 4rem 2rem; min-height: 300px; }
+    .newsletter p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: rgba(247,247,247,0.7);
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+
+    .newsletter-form button {
+      padding: 12px 24px;
+      background: var(--brown);
+      color: #fff;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .newsletter-form button:hover { background: var(--brown-hover); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(247,247,247,0.5);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1023px) {
+      .main-nav { display: none; }
+      .nav-toggle { display: block; }
+      .main-nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        padding: 0;
+      }
+      .main-nav.open .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        display: none;
+      }
+      .main-nav.open li:hover .dropdown-menu { display: block; }
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .hero-content { padding: 0 1.5rem 6vh; }
-      .gallery-grid { columns: 1; }
-      .services-grid { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .showcase-card { flex: 0 0 85vw; }
-      section { padding: 5rem 1.5rem; }
-      .about-features { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero { min-height: 400px; height: 60vh; }
     }
 
-    /* ========== ANIMATIONS ========== */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
+    @media (max-width: 450px) {
+      .gallery-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <a href="#" class="logo">Zone<span>Terrasse</span></a>
-    <ul class="nav-links">
-      <li><a href="#realisations">Réalisations</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#apropos">À propos</a></li>
-      <li><a href="#contact" class="nav-cta">Contactez-nous</a></li>
-    </ul>
-    <button class="hamburger" aria-label="Menu">
+  <!-- Accessibility: skip to content -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- HEADER -->
+  <header role="banner">
+    <a href="/" class="logo" aria-label="Zone Terrasse — Accueil">
+      <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/blob.png/:/rs=h:200,cg:true,m/qt=q:95" alt="Zone Terrasse" width="160" height="80" loading="eager">
+    </a>
+
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-  </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <span class="hero-tag">Construction extérieure &mdash; Québec</span>
-      <h1>Des terrasses qui deviennent de véritables <em>espaces de vie</em></h1>
-      <p>Conception et construction de patios, terrasses, pergolas et aménagements extérieurs durables. Depuis Québec, avec passion.</p>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a href="#realisations" class="btn">
-          Voir nos réalisations
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#contact" class="btn btn-outline">Prendre rendez-vous</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PHOTO SHOWCASE — HORIZONTAL SCROLL -->
-  <section class="showcase" style="padding: 6rem 0;">
-    <div style="padding: 0 5vw; margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 1rem;">
-      <div class="section-header" style="margin-bottom: 0;">
-        <span class="section-tag">Projets vedettes</span>
-        <h2>Nos réalisations récentes</h2>
-      </div>
-      <p style="color: var(--text-muted); font-size: 0.85rem;">Glissez pour explorer &rarr;</p>
-    </div>
-    <div class="showcase-scroll">
-      <div class="showcase-card">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Terrasse en composite avec pergola" loading="lazy">
-        <div class="showcase-info">
-          <h3>Terrasse avec pergola intégrée</h3>
-          <p>Composite &mdash; Beauport, Québec</p>
-        </div>
-      </div>
-      <div class="showcase-card">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Patio en bois traité avec rampes" loading="lazy">
-        <div class="showcase-info">
-          <h3>Patio en bois avec rampes modernes</h3>
-          <p>Bois traité &mdash; Sainte-Foy</p>
-        </div>
-      </div>
-      <div class="showcase-card">
-        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" alt="Solarium quatre saisons" loading="lazy">
-        <div class="showcase-info">
-          <h3>Solarium quatre saisons</h3>
-          <p>Verre trempé &mdash; Charlesbourg</p>
-        </div>
-      </div>
-      <div class="showcase-card">
-        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80" alt="Aménagement extérieur complet" loading="lazy">
-        <div class="showcase-info">
-          <h3>Aménagement extérieur complet</h3>
-          <p>Multi-matériaux &mdash; Lévis</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY — MASONRY -->
-  <section class="gallery" id="realisations">
-    <div class="section-header fade-up">
-      <span class="section-tag">Portfolio</span>
-      <h2>L'univers Zone Terrasse en images</h2>
-      <p>Chaque projet est unique. Découvrez notre savoir-faire à travers nos réalisations.</p>
-    </div>
-    <div class="gallery-grid fade-up">
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Deck en composite avec vue" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Deck panoramique</h3>
-          <span>Composite</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Pergola moderne" loading="lazy" style="aspect-ratio: 3/4; object-fit: cover;">
-        <div class="gallery-overlay">
-          <h3>Pergola autoportante</h3>
-          <span>Pergolas</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Terrasse en bois" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Terrasse en bois naturel</h3>
-          <span>Patios</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Rampes en verre" loading="lazy" style="aspect-ratio: 4/5; object-fit: cover;">
-        <div class="gallery-overlay">
-          <h3>Rampes en verre trempé</h3>
-          <span>Rampes</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80" alt="Cuisine extérieure" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Cuisine extérieure</h3>
-          <span>Aménagement</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Installation commerciale" loading="lazy" style="aspect-ratio: 3/4; object-fit: cover;">
-        <div class="gallery-overlay">
-          <h3>Terrasse commerciale</h3>
-          <span>Commercial</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Cabanon sur mesure" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Cabanon sur mesure</h3>
-          <span>Cabanons</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Solarium vitré" loading="lazy" style="aspect-ratio: 4/5; object-fit: cover;">
-        <div class="gallery-overlay">
-          <h3>Solarium 4 saisons</h3>
-          <span>Solarium</span>
-        </div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Rampe aluminium" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Rampes aluminium</h3>
-          <span>Rampes</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="section-header fade-up" style="padding: 0 0 0 3rem;">
-      <span class="section-tag">Ce que nous faisons</span>
-      <h2>Services offerts</h2>
-      <p>Une gamme complète pour la conception, construction et aménagement d'espaces extérieurs durables et esthétiques.</p>
-    </div>
-    <div class="services-grid fade-up">
-      <div class="service-card">
-
-        <h3>Patios &amp; Terrasses</h3>
-        <p>Conception et construction de patios sur mesure. Bois traité, cèdre ou composite selon vos besoins.</p>
-      </div>
-      <div class="service-card">
-
-        <h3>Rampes sécuritaires</h3>
-        <p>Installation de rampes modernes en verre, aluminium ou bois. Conformes aux normes du Code du bâtiment.</p>
-      </div>
-      <div class="service-card">
-
-        <h3>Pergolas</h3>
-        <p>Conception de pergolas autoportantes ou adossées pour créer des zones d'ombre élégantes.</p>
-      </div>
-      <div class="service-card">
-
-        <h3>Solariums</h3>
-        <p>Construction de solariums quatre saisons pour profiter de l'extérieur à l'année.</p>
-      </div>
-      <div class="service-card">
-
-        <h3>Cabanons &amp; Garages</h3>
-        <p>Construction de cabanons et garages sur mesure, intégrés à votre aménagement extérieur.</p>
-      </div>
-      <div class="service-card">
-
-        <h3>Cuisines extérieures</h3>
-        <p>Installation complète de cuisines extérieures pour des étés mémorables.</p>
-      </div>
-      <div class="service-card">
-
-        <h3>Aménagement extérieur</h3>
-        <p>Optimisation complète de votre cour : éclairage, rangement, zones de détente.</p>
-      </div>
-      <div class="service-card">
-
-        <h3>Rénovation</h3>
-        <p>Services de rénovation de tous genres pour améliorer, moderniser ou transformer vos espaces.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats fade-up">
-    <div class="stat">
-      <div class="stat-num">500+</div>
-      <div class="stat-label">Projets complétés</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">15</div>
-      <div class="stat-label">Années d'expérience</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Satisfaction client</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">RBQ</div>
-      <div class="stat-label">Licence 5782-3031-01</div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="about" id="apropos">
-    <div class="about-image">
-      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80" alt="Équipe Zone Terrasse au travail" loading="lazy">
-    </div>
-    <div class="about-content fade-up">
-      <span class="section-tag">À propos</span>
-      <h2>Nous construisons des terrasses solides. Mais surtout, nous bâtissons la confiance.</h2>
-      <p>Zone Terrasse est née d'une passion pour la construction extérieure de qualité. Nous croyons qu'un patio bien conçu augmente non seulement la valeur d'une propriété, mais surtout la qualité de vie.</p>
-      <p>Chaque projet est traité comme si c'était le nôtre.</p>
-      <ul class="about-features">
-        <li>Analyse personnalisée</li>
-        <li>Conseils honnêtes</li>
-        <li>Matériaux durables</li>
-        <li>Travail rigoureux</li>
-        <li>Respect des délais</li>
-        <li>Finitions soignées</li>
-        <li>Solutions durables</li>
-        <li>Service professionnel</li>
+    <nav aria-label="Navigation principale">
+      <ul class="main-nav" id="main-nav" role="menubar">
+        <li role="none"><a href="/" role="menuitem">Accueil</a></li>
+        <li role="none"><a href="#apropos" role="menuitem">À propos</a></li>
+        <li role="none"><a href="#services" role="menuitem">Services</a></li>
+        <li role="none">
+          <a href="#realisations" role="menuitem" aria-haspopup="true">Nos réalisations</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Sous-menu réalisations">
+            <li role="none"><a href="/solarium" role="menuitem">Solarium</a></li>
+            <li role="none"><a href="/rampes-et-solarium" role="menuitem">Rampes et solarium</a></li>
+            <li role="none"><a href="/rampes-en-verre" role="menuitem">Rampes en verre</a></li>
+            <li role="none"><a href="/rampes" role="menuitem">Rampes</a></li>
+            <li role="none"><a href="/rampe-et-pergolas" role="menuitem">Rampe et Pergolas</a></li>
+            <li role="none"><a href="/rampe-aluminium" role="menuitem">Rampe Aluminium</a></li>
+            <li role="none"><a href="/pergolas" role="menuitem">Pergolas</a></li>
+            <li role="none"><a href="/deckavie" role="menuitem">Deckavie</a></li>
+            <li role="none"><a href="/commercial" role="menuitem">Commercial</a></li>
+          </ul>
+        </li>
+        <li role="none"><a href="#contact" role="menuitem">Contactez-nous</a></li>
       </ul>
-      <div class="rbq">
-        <strong>Licence RBQ :</strong> 5782-3031-01 — Entrepreneur général en construction
-      </div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact-form-wrap fade-up">
-      <span class="section-tag">Parlons de votre projet</span>
-      <h2>Contactez-nous</h2>
-      <p>Prenez rendez-vous gratuitement avec notre équipe d'experts pour discuter de vos projets.</p>
-      <form onsubmit="event.preventDefault(); alert('Merci! Nous vous contacterons sous peu.');">
-        <div class="form-group">
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Téléphone</label>
-          <input type="tel" id="phone" name="phone" placeholder="418-000-0000">
-        </div>
-        <div class="form-group">
-          <label for="message">Votre projet</label>
-          <textarea id="message" name="message" placeholder="Décrivez votre projet, vos idées, vos questions..."></textarea>
-        </div>
-        <button type="submit" class="btn" style="width: 100%; justify-content: center;">
-          Envoyer
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </form>
-    </div>
-    <div class="contact-info-wrap">
-      <div class="contact-detail">
-        <h4>Adresse</h4>
-        <p>570 Rue de l'Argon, Porte 100<br>Québec City, QC</p>
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Bannière principale">
+      <div class="hero-bg" role="img" aria-label="Terrasse extérieure construite par Zone Terrasse"></div>
+      <div class="hero-content">
+        <h1>Construction patio et terrasse</h1>
+        <p>Parlez-nous de votre projet de terrasse et voyons ensemble comment le réaliser.</p>
+        <a href="#contact" class="btn-primary">En savoir plus</a>
       </div>
-      <div class="contact-detail">
-        <h4>Téléphone</h4>
-        <p><a href="tel:4189995325">418-999-5325</a></p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="section-inner">
+        <h2 class="section-title" id="services-title">Services offerts</h2>
+        <p class="services-intro">Nous offrons une gamme complète de services pour la conception, la construction et l'aménagement d'espaces extérieurs durables et esthétiques.</p>
+        <ul class="services-list">
+          <li>Conception et construction de patios</li>
+          <li>Création de terrasses sur mesure</li>
+          <li>Installation de rampes sécuritaires et modernes</li>
+          <li>Conception de pergolas</li>
+          <li>Construction de cabanons</li>
+          <li>Construction de garages</li>
+          <li>Installation de cuisines extérieures</li>
+          <li>Aménagement extérieur et optimisation de votre cour</li>
+        </ul>
+        <p class="services-note">Nous offrons également des services de rénovation de tous genres, afin d'améliorer, moderniser ou transformer vos espaces selon vos besoins.</p>
       </div>
-      <div class="contact-detail">
-        <h4>Email</h4>
-        <p><a href="mailto:zoneterrasse@gmail.com">zoneterrasse@gmail.com</a></p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="apropos" aria-labelledby="about-title">
+      <div class="section-inner">
+        <h2 class="section-title" id="about-title">À propos de nous</h2>
+        <div class="about-grid">
+          <div class="about-col">
+            <h3>Notre mission</h3>
+            <p>Créer des terrasses et patios qui deviennent de véritables espaces de vie. Zone Terrasse est née d'une passion pour la construction extérieure de qualité. Nous croyons qu'un patio bien conçu augmente non seulement la valeur d'une propriété, mais surtout la qualité de vie.</p>
+          </div>
+          <div class="about-col">
+            <h3>Pourquoi nous choisir ?</h3>
+            <ul>
+              <li>&#10004; Analyse personnalisée</li>
+              <li>&#10004; Conseils honnêtes</li>
+              <li>&#10004; Matériaux durables</li>
+              <li>&#10004; Travail rigoureux</li>
+              <li>&#10004; Respect des délais</li>
+            </ul>
+            <p>Chaque projet est traité comme si c'était le nôtre.</p>
+          </div>
+          <div class="about-col">
+            <h3>Notre approche</h3>
+            <ul>
+              <li>&#8226; Expertise en conception extérieure</li>
+              <li>&#8226; Finitions soignées</li>
+              <li>&#8226; Solutions durables</li>
+              <li>&#8226; Service professionnel et humain</li>
+            </ul>
+            <p class="tagline">Nous construisons des terrasses solides. Mais surtout, nous bâtissons la confiance.</p>
+          </div>
+        </div>
       </div>
-      <div class="contact-detail">
-        <h4>Heures</h4>
-        <p>Lundi — Vendredi : Sur rendez-vous<br>Samedi — Dimanche : Fermé</p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery-section" id="realisations" aria-labelledby="gallery-title">
+      <div class="section-inner">
+        <h2 class="section-title" id="gallery-title">Nos réalisations</h2>
+        <p class="gallery-intro">Découvrez l'univers de Zone Terrasse à travers une galerie photo inspirante de nos réalisations</p>
+        <div class="gallery-grid" role="list">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Rampes%20en%20verre%20(2).jpg/:/rs=w:600,m" alt="Installation d'une rampe en verre moderne offrant sécurité, luminosité et une vue dégagée." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Solarium%20(10).jpg/:/rs=w:600,m" alt="Solarium durable pour un espace extérieur lumineux et protégé." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Deckavie%20(5).jpg/:/rs=w:600,m" alt="Installation d'un deck durable et sans entretien pour profiter pleinement de votre terrasse pendant plusieurs années." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Deckavie%20(2).jpg/:/rs=w:600,m" alt="Installation d'un deck durable et sans entretien pour profiter pleinement de votre terrasse." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Solarium%20(4).jpg/:/rs=w:600,m" alt="Ajout d'un solarium élégant pour prolonger le confort de votre terrasse." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Pergolas%20(3).jpg/:/rs=w:600,m" alt="Pergola moderne conçue pour ajouter confort et style à l'espace extérieur." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Rampes%20(1).jpg/:/rs=w:600,m" alt="Installation de rampes durables et sécuritaires pour terrasse ou balcon." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Solarium%20(6).jpg/:/rs=w:600,m" alt="Ajout d'un solarium élégant pour prolonger le confort de votre terrasse." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/commercial%20(1).jpg/:/rs=w:600,m" alt="Installation de rampes en verre pour terrasses et balcons d'un immeuble commercial." loading="lazy" width="600" height="450" role="listitem">
+          <img src="https://img1.wsimg.com/isteam/ip/6327bd69-8b41-4c05-9458-e9e8f0b6e63f/Deckavie%20(7).jpg/:/rs=w:600,m" alt="Deck Deckavie composite durable installé par Zone Terrasse." loading="lazy" width="600" height="450" role="listitem">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <h2 class="section-title" id="contact-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-form">
+            <h3>Envoyez-nous un email !</h3>
+            <form onsubmit="event.preventDefault(); alert('Merci! Nous vous contacterons sous peu.');" aria-label="Formulaire de contact">
+              <div class="form-field">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Email <span aria-label="requis">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+              </div>
+              <button type="submit" class="btn-primary">Envoyer</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Nous trouver</h3>
+            <p>Nous vous invitons à prendre rendez-vous gratuitement avec notre équipe d'experts pour discuter de vos projets et découvrir nos produits en magasin. Profitez de l'opportunité unique de voir nos solutions innovantes en personne et de bénéficier de conseils personnalisés.</p>
+            <p>
+              <strong>Zone Terrasse</strong><br>
+              570 Rue de l'Argon, Porte 100<br>
+              Québec City, QC
+            </p>
+            <p>
+              <a href="tel:+14189995325">418-999-5325</a><br>
+              <a href="mailto:zoneterrasse@gmail.com">zoneterrasse@gmail.com</a>
+            </p>
+            <table class="hours-table" aria-label="Heures d'ouverture">
+              <tbody>
+                <tr><td>Lundi</td><td>Sur rendez-vous</td></tr>
+                <tr><td>Mardi</td><td>Sur rendez-vous</td></tr>
+                <tr><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+                <tr><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+                <tr><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+                <tr><td>Samedi</td><td>Fermé</td></tr>
+                <tr><td>Dimanche</td><td>Fermé</td></tr>
+              </tbody>
+            </table>
+            <p class="rbq">RBQ : 5782-3031-01</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- NEWSLETTER -->
+  <aside class="newsletter" aria-label="Inscription à l'infolettre">
+    <h2>Inscrivez-vous</h2>
+    <p>Inscrivez-vous pour en savoir plus sur nos offres spéciales, nos soldes et nos événements.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription!');" aria-label="Formulaire d'inscription à l'infolettre">
+      <label for="newsletter-email" class="skip-link" style="position:absolute;">Courriel</label>
+      <input type="email" id="newsletter-email" name="email" placeholder="Votre courriel" autocomplete="email" required>
+      <button type="submit">S'inscrire</button>
+    </form>
+  </aside>
 
   <!-- FOOTER -->
-  <footer>
-    <span>&copy; 2026 Zone Terrasse — Tous droits réservés.</span>
-    <a href="#">RBQ 5782-3031-01</a>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2026 Zone Terrasse - Tous droits réservés.</p>
   </footer>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" aria-label="Fermer">&times;</button>
-    <img src="" alt="">
-  </div>
-
   <script>
-    // Image fallback — show gradient placeholder if image fails to load
-    document.querySelectorAll('img[loading="lazy"], .gallery-item img, .showcase-card img, .about-image img').forEach(img => {
-      img.onerror = function() {
-        this.style.display = 'none';
-        this.parentElement.style.background = 'linear-gradient(135deg, #1a1a1a 0%, #2a2018 50%, #1a1a1a 100%)';
-        this.parentElement.style.minHeight = this.parentElement.style.minHeight || '300px';
-      };
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('main-nav');
+    toggle.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
     });
-
-    // Nav scroll effect
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Lightbox
-    function openLightbox(item) {
-      const img = item.querySelector('img');
-      const lb = document.getElementById('lightbox');
-      lb.querySelector('img').src = img.src.replace('w=800', 'w=1600');
-      lb.querySelector('img').alt = img.alt;
-      lb.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-
-    // Smooth horizontal scroll with mouse wheel on showcase
-    const showcase = document.querySelector('.showcase-scroll');
-    if (showcase) {
-      showcase.addEventListener('wheel', (e) => {
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-          e.preventDefault();
-          showcase.scrollLeft += e.deltaY;
-        }
-      }, { passive: false });
-    }
   </script>
 </body>
 </html>
