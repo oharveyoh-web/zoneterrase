@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zone Terrasse — Construction patio et terrasse | Québec</title>
+  <meta name="description" content="Zone Terrasse : conception et construction de patios, terrasses, pergolas et aménagements extérieurs à Québec. RBQ 5782-3031-01.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --brown: #a07453;
+      --brown-light: #c4956e;
+      --brown-dark: #7a5639;
+      --black: #0a0a0a;
+      --dark: #141414;
+      --dark-card: #1a1a1a;
+      --grey: #2a2a2a;
+      --text: #f0ece8;
+      --text-muted: #8a8580;
+      --gold: #d4a574;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== NAV ========== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+
+    nav.scrolled {
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 3rem;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      background: var(--brown) !important;
+      color: var(--text) !important;
+      padding: 0.65rem 1.5rem;
+      border-radius: 2px;
+      transition: background 0.3s !important;
+    }
+
+    .nav-cta:hover { background: var(--brown-light) !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.3) 50%, rgba(10,10,10,0.95) 100%),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80') center/cover no-repeat;
+      transform: scale(1.05);
+      transition: transform 8s ease-out;
+    }
+
+    .hero:hover .hero-bg { transform: scale(1.0); }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 5vw 8vh;
+      max-width: 800px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2.2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--brown);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--brown-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .btn svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover svg { transform: translateX(4px); }
+
+    /* ========== SECTION COMMONS ========== */
+    section { padding: 8rem 5vw; }
+
+    .section-header {
+      max-width: 600px;
+      margin-bottom: 5rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ========== GALLERY — MASONRY ========== */
+    .gallery { background: var(--black); }
+
+    .gallery-grid {
+      columns: 3;
+      column-gap: 1rem;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.6s ease, filter 0.6s ease;
+      filter: brightness(0.85);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: brightness(1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 2rem 1.5rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-overlay h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 0.3rem;
+    }
+
+    .gallery-overlay span {
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ========== SERVICES ========== */
+    .services { background: var(--dark); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .service-card {
+      background: var(--dark);
+      padding: 3rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.4s;
+      cursor: default;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover { background: var(--dark-card); }
+
+    .service-num {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ========== PHOTO SHOWCASE — FULL WIDTH ========== */
+    .showcase {
+      padding: 0;
+      position: relative;
+    }
+
+    .showcase-scroll {
+      display: flex;
+      gap: 1rem;
+      padding: 0 5vw;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .showcase-scroll::-webkit-scrollbar { display: none; }
+
+    .showcase-card {
+      flex: 0 0 70vw;
+      max-width: 900px;
+      height: 65vh;
+      min-height: 450px;
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+
+    .showcase-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .showcase-card:hover img { transform: scale(1.03); }
+
+    .showcase-info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 3rem 2.5rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    }
+
+    .showcase-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .showcase-info p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ========== ABOUT ========== */
+    .about {
+      background: var(--dark);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 0;
+    }
+
+    .about-image {
+      position: relative;
+      min-height: 600px;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content {
+      padding: 6rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-content .section-tag { margin-bottom: 1rem; }
+
+    .about-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .about-features {
+      list-style: none;
+      margin: 2rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .about-features li {
+      font-size: 0.85rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .about-features li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .rbq {
+      margin-top: 2rem;
+      padding: 1.2rem 1.5rem;
+      background: rgba(160,116,83,0.1);
+      border-left: 2px solid var(--gold);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .rbq strong { color: var(--text); }
+
+    /* ========== STATS ========== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.05);
+      padding: 0;
+    }
+
+    .stat {
+      background: var(--black);
+      padding: 4rem 3rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      background: var(--dark);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 0;
+    }
+
+    .contact-form-wrap {
+      padding: 6rem 5rem;
+    }
+
+    .contact-form-wrap h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form-wrap > p {
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      border-radius: 2px;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 140px; }
+
+    .contact-info-wrap {
+      background:
+        linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)),
+        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80') center/cover;
+      padding: 6rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .contact-detail {
+      margin-bottom: 2rem;
+    }
+
+    .contact-detail h4 {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-detail p {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .contact-detail a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-detail a:hover { color: var(--gold); }
+
+    /* ========== FOOTER ========== */
+    footer {
+      padding: 3rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--text); }
+
+    /* ========== LIGHTBOX ========== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 2px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .gallery-grid { columns: 2; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .about { grid-template-columns: 1fr; }
+      .about-image { min-height: 400px; }
+      .about-content { padding: 4rem 2rem; }
+      .contact { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 4rem 2rem; }
+      .contact-info-wrap { padding: 4rem 2rem; min-height: 300px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-content { padding: 0 1.5rem 6vh; }
+      .gallery-grid { columns: 1; }
+      .services-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .showcase-card { flex: 0 0 85vw; }
+      section { padding: 5rem 1.5rem; }
+      .about-features { grid-template-columns: 1fr; }
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="logo">Zone<span>Terrasse</span></a>
+    <ul class="nav-links">
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact" class="nav-cta">Contactez-nous</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Construction extérieure &mdash; Québec</span>
+      <h1>Des terrasses qui deviennent de véritables <em>espaces de vie</em></h1>
+      <p>Conception et construction de patios, terrasses, pergolas et aménagements extérieurs durables. Depuis Québec, avec passion.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="#realisations" class="btn">
+          Voir nos réalisations
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO SHOWCASE — HORIZONTAL SCROLL -->
+  <section class="showcase" style="padding: 6rem 0;">
+    <div style="padding: 0 5vw; margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 1rem;">
+      <div class="section-header" style="margin-bottom: 0;">
+        <span class="section-tag">Projets vedettes</span>
+        <h2>Nos réalisations récentes</h2>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.85rem;">Glissez pour explorer &rarr;</p>
+    </div>
+    <div class="showcase-scroll">
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80" alt="Terrasse en composite avec pergola" loading="lazy">
+        <div class="showcase-info">
+          <h3>Terrasse avec pergola intégrée</h3>
+          <p>Composite &mdash; Beauport, Québec</p>
+        </div>
+      </div>
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=80" alt="Patio en bois traité avec rampes" loading="lazy">
+        <div class="showcase-info">
+          <h3>Patio en bois avec rampes modernes</h3>
+          <p>Bois traité &mdash; Sainte-Foy</p>
+        </div>
+      </div>
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=1200&q=80" alt="Solarium quatre saisons" loading="lazy">
+        <div class="showcase-info">
+          <h3>Solarium quatre saisons</h3>
+          <p>Verre trempé &mdash; Charlesbourg</p>
+        </div>
+      </div>
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80" alt="Aménagement extérieur complet" loading="lazy">
+        <div class="showcase-info">
+          <h3>Aménagement extérieur complet</h3>
+          <p>Multi-matériaux &mdash; Lévis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY — MASONRY -->
+  <section class="gallery" id="realisations">
+    <div class="section-header fade-up">
+      <span class="section-tag">Portfolio</span>
+      <h2>L'univers Zone Terrasse en images</h2>
+      <p>Chaque projet est unique. Découvrez notre savoir-faire à travers nos réalisations.</p>
+    </div>
+    <div class="gallery-grid fade-up">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Deck en composite avec vue" loading="lazy">
+        <div class="gallery-overlay">
+          <h3>Deck panoramique</h3>
+          <span>Composite</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80" alt="Pergola moderne" loading="lazy" style="aspect-ratio: 3/4; object-fit: cover;">
+        <div class="gallery-overlay">
+          <h3>Pergola autoportante</h3>
+          <span>Pergolas</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Terrasse en bois" loading="lazy">
+        <div class="gallery-overlay">
+          <h3>Terrasse en bois naturel</h3>
+          <span>Patios</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" alt="Rampes en verre" loading="lazy" style="aspect-ratio: 4/5; object-fit: cover;">
+        <div class="gallery-overlay">
+          <h3>Rampes en verre trempé</h3>
+          <span>Rampes</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="Cuisine extérieure" loading="lazy">
+        <div class="gallery-overlay">
+          <h3>Cuisine extérieure</h3>
+          <span>Aménagement</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80" alt="Installation commerciale" loading="lazy" style="aspect-ratio: 3/4; object-fit: cover;">
+        <div class="gallery-overlay">
+          <h3>Terrasse commerciale</h3>
+          <span>Commercial</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80" alt="Cabanon sur mesure" loading="lazy">
+        <div class="gallery-overlay">
+          <h3>Cabanon sur mesure</h3>
+          <span>Cabanons</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Solarium vitré" loading="lazy" style="aspect-ratio: 4/5; object-fit: cover;">
+        <div class="gallery-overlay">
+          <h3>Solarium 4 saisons</h3>
+          <span>Solarium</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80" alt="Rampe aluminium" loading="lazy">
+        <div class="gallery-overlay">
+          <h3>Rampes aluminium</h3>
+          <span>Rampes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header fade-up" style="padding: 0 0 0 3rem;">
+      <span class="section-tag">Ce que nous faisons</span>
+      <h2>Services offerts</h2>
+      <p>Une gamme complète pour la conception, construction et aménagement d'espaces extérieurs durables et esthétiques.</p>
+    </div>
+    <div class="services-grid fade-up">
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <h3>Patios &amp; Terrasses</h3>
+        <p>Conception et construction de patios sur mesure. Bois traité, cèdre ou composite selon vos besoins.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <h3>Rampes sécuritaires</h3>
+        <p>Installation de rampes modernes en verre, aluminium ou bois. Conformes aux normes du Code du bâtiment.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <h3>Pergolas</h3>
+        <p>Conception de pergolas autoportantes ou adossées pour créer des zones d'ombre élégantes.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <h3>Solariums</h3>
+        <p>Construction de solariums quatre saisons pour profiter de l'extérieur à l'année.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <h3>Cabanons &amp; Garages</h3>
+        <p>Construction de cabanons et garages sur mesure, intégrés à votre aménagement extérieur.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">06</span>
+        <h3>Cuisines extérieures</h3>
+        <p>Installation complète de cuisines extérieures pour des étés mémorables.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">07</span>
+        <h3>Aménagement extérieur</h3>
+        <p>Optimisation complète de votre cour : éclairage, rangement, zones de détente.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">08</span>
+        <h3>Rénovation</h3>
+        <p>Services de rénovation de tous genres pour améliorer, moderniser ou transformer vos espaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats fade-up">
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Projets complétés</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">15</div>
+      <div class="stat-label">Années d'expérience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Satisfaction client</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">RBQ</div>
+      <div class="stat-label">Licence 5782-3031-01</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="apropos">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=80" alt="Équipe Zone Terrasse au travail" loading="lazy">
+    </div>
+    <div class="about-content fade-up">
+      <span class="section-tag">À propos</span>
+      <h2>Nous construisons des terrasses solides. Mais surtout, nous bâtissons la confiance.</h2>
+      <p>Zone Terrasse est née d'une passion pour la construction extérieure de qualité. Nous croyons qu'un patio bien conçu augmente non seulement la valeur d'une propriété, mais surtout la qualité de vie.</p>
+      <p>Chaque projet est traité comme si c'était le nôtre.</p>
+      <ul class="about-features">
+        <li>Analyse personnalisée</li>
+        <li>Conseils honnêtes</li>
+        <li>Matériaux durables</li>
+        <li>Travail rigoureux</li>
+        <li>Respect des délais</li>
+        <li>Finitions soignées</li>
+        <li>Solutions durables</li>
+        <li>Service professionnel</li>
+      </ul>
+      <div class="rbq">
+        <strong>Licence RBQ :</strong> 5782-3031-01 — Entrepreneur général en construction
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-form-wrap fade-up">
+      <span class="section-tag">Parlons de votre projet</span>
+      <h2>Contactez-nous</h2>
+      <p>Prenez rendez-vous gratuitement avec notre équipe d'experts pour discuter de vos projets.</p>
+      <form onsubmit="event.preventDefault(); alert('Merci! Nous vous contacterons sous peu.');">
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone" placeholder="418-000-0000">
+        </div>
+        <div class="form-group">
+          <label for="message">Votre projet</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre projet, vos idées, vos questions..."></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+          Envoyer
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+    <div class="contact-info-wrap">
+      <div class="contact-detail">
+        <h4>Adresse</h4>
+        <p>570 Rue de l'Argon, Porte 100<br>Québec City, QC</p>
+      </div>
+      <div class="contact-detail">
+        <h4>Téléphone</h4>
+        <p><a href="tel:4189995325">418-999-5325</a></p>
+      </div>
+      <div class="contact-detail">
+        <h4>Email</h4>
+        <p><a href="mailto:zoneterrasse@gmail.com">zoneterrasse@gmail.com</a></p>
+      </div>
+      <div class="contact-detail">
+        <h4>Heures</h4>
+        <p>Lundi — Vendredi : Sur rendez-vous<br>Samedi — Dimanche : Fermé</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>&copy; 2026 Zone Terrasse — Tous droits réservés.</span>
+    <a href="#">RBQ 5782-3031-01</a>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Fermer">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Lightbox
+    function openLightbox(item) {
+      const img = item.querySelector('img');
+      const lb = document.getElementById('lightbox');
+      lb.querySelector('img').src = img.src.replace('w=800', 'w=1600');
+      lb.querySelector('img').alt = img.alt;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Smooth horizontal scroll with mouse wheel on showcase
+    const showcase = document.querySelector('.showcase-scroll');
+    if (showcase) {
+      showcase.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          showcase.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>
